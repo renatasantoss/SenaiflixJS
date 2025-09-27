@@ -304,3 +304,203 @@
 //         console.log(`Valor normal: R$ ${valorCompra.toFixed(2)}`);
 //     }
 // }
+
+//Estruturas de repetição
+// while
+// let i = 1;
+
+// while (i <= 5) {
+//     console.log("Número:", i);
+//     i++;
+// }
+
+// do/while
+// let senha;
+// do {
+//     senha = prompt("Digite a senha");
+// } while (senha !== "1234");
+// console.log("Acesso liberado.");
+
+// for
+//Estrutura: (Início; Condição; Incremento)
+
+// for (let i = 1; i <= 10; i++) {
+//     console.log(`7 X ${i} = ${7 * i}`);
+// }
+
+//for...of
+// const frutas = ["Maçã", "Banana", "Laranja"];
+// for (const fruta of frutas) {
+//     console.log(fruta);
+// }
+
+//for...in
+// const pessoa = {nome: "Renata", idade: 26, cidade: "Santo André"};	
+// for (const chave in pessoa) {
+//     console.log(`${chave}: ${pessoa[chave]}`);
+// }
+
+//forEach
+// const numeros = [1,2,3,4,5,6,7,8,9,10];
+
+// // numeros.forEach(function(n) {
+// //     console.log(`7 X ${n} = ${7 * n}`)
+
+// // });
+
+// numeros.forEach(n => console.log(`7 X ${n} = ${7 * n}`))
+
+//1 Mostrar os números de 1 a 10 com while
+
+// let i = 1;
+// while (i <= 10) {
+//     console.log(i);
+//     i++;
+// }
+
+// Mostrar a tabuada do 5 com for
+
+// for (let i = 1; i <= 10; i++) {
+//     console.log(`5 X ${i} = ${5 * i}`);
+// }
+
+// Somar os números de 1 a 100 com for 1+1, 1+2 ... 1+100
+// let soma = 0;
+// for (let i = 1; i <= 100; i++) {
+//   soma += i
+// }  console.log(`A soma de 1 a 100: ${soma}`)
+
+// Média de 5 números
+// Faça um programa que peça 5 números ao usuário, calcule e mostre a média deles.
+// let soma = 0;
+
+// for (let i = 1; i <= 5; i++) {
+//     const num = Number(prompt(`Digite o ${i} número:`));
+//     soma += num
+// }
+
+// const media = soma / 5;
+// console.log(`A média é ${media}`)
+
+//Ler nomes até digitar "sair"
+//Crie um programa que peça nomes ao usuário repetidamente.
+//O programa só deve parar quando o usuário digitar "sair"
+
+// let nome;
+// do {
+//     nome = prompt("Digite um nome(ou 'sair' para encerrar:");
+//     if (nome !== "sair") {
+//         console.log(`Você digitou: $(nome)`);
+//     }
+// } while (nome !== "sair");
+
+//1 Mostrar os números de 1 a 10 com for
+
+// for (let i = 1; i <= 10; i++) {
+//     console.log(i);
+// }
+
+//Tabuada de um número com for
+// const num = Number(prompt("Digite um número para ver a tabuada:"));
+// for (let i = 1; i <= 10; i++) {
+//     console.log(`${num} X ${i} = ${num * i}`);
+// }
+
+// const numeros = [1,2,3,4,5,6,7,8,9,10];
+// const x = [1,2,3,4,5,6,7,8,9,10];
+
+// numeros.forEach(function(numeros) {
+//     x.forEach(function(x) {
+//     console.log(`${numeros} X ${x} = ${numeros * x}`)
+// })})
+
+
+//Soma dos primeiros N números naturais
+//Peça um número `N` ao usuário.
+//Use um `while` ou `for` para somar os números de `1` até `N`.
+
+// let soma = 0;
+// const num = Number(prompt("Digite um número N:"));
+// for (let i = 1; i <= num; i++) {
+//     soma += i 
+// }
+// console.log(soma);
+
+//Exibir os números pares de 1 a 50:
+//Use um `for` ou `while` para exibir apenas os números pares de `1` a `50`.
+
+// let i = 1;
+// while (i <= 50) {
+//     if (i % 2 === 0) {
+//     console.log("Número:", i);
+//     } i++;
+// }
+
+//Jogo de adivinhação:
+// const segredo = Math.floor(Math.random() * 100) + 1;
+// let tentativa;
+
+// do {
+//     const entrada = prompt("Adivinhe o número (entre 1 e 100):");
+
+//     tentativa = Number(entrada);
+
+//     if (tentativa > segredo) {
+//         console.log("Muito alto! Tente novamente.");
+//     } else if (tentativa < segredo) {
+//         console.log("Muito baixo! Tente novamente.");
+//     } else {
+//         console.log("Parabéns, você acertou!");
+//     }
+// } while (tentativa !== segredo);
+
+//Math
+// console.log(Math.PI);
+
+// console.log(Math.floor(4.9)); - Arredonda para mais;
+// console.log(Math.ceil(4.1)); - Arredonda para menos;
+// console.log(Math.round(4.5)); - Arredonda para o mais próximo;
+
+
+// console.log(Math.pow(2, 3));
+// console.log(2 ** 3);
+// console.log(Math.sqrt(16));
+
+// console.log(Math.min(4, 7, 1, 9));
+// console.log(Math.max(4, 7, 1, 9));
+
+// //Descobrir o maior número entre três valores digitados pelo usuário
+// console.log("Maio número:", Math.max(n1, n2, n3))
+
+//Contagem regressiva:
+//Peça um número ao usuário e exiba uma contagem regressiva até 0 usando um `while`.
+
+// let numero = Number(prompt("Digite um número para a contagem regressiva:"));
+
+//     while (numero >= 0) {
+//         console.log(numero);
+//         numero--;
+//       }
+//       console.log("Contagem regressiva finalizada!");
+
+// Soma dos dígitos de um número:
+// Peça ao usuário um número inteiro positivo.
+// Use um `while` para somar seus dígitos.
+
+// let numero = Number(prompt("Digite um número inteiro positivo:"));
+// let soma = 0;
+// let numeroOriginal = numero; 
+
+// while (numero > 0) {
+//     let digito = numero % 10;
+//     soma += digito;
+//     numero = Math.floor(numero / 10);
+// }
+
+// console.log(`A soma dos dois digitos de ${numeroOriginal} é ${soma}`);
+
+//Inverter um número:
+//Peça um número ao usuário.
+//Use um `while` para inverter seus dígitos (exemplo: `123` → `321`).
+
+
