@@ -598,6 +598,8 @@
 
 // console.log("Resultado reduce", somaIdade)
 
+//Exercícios de Map – JavaScript
+
 //Ex 1 - Filter (facil)
 //Dado const arr = [10,15,20,25.30], use filter para obter numeros maiores ou iguais a 20.
 
@@ -638,7 +640,7 @@
 
 // ];
 
-// // const nomes = produtos.filter(p => p.preco > 20).map(p => p.nome);
+//  const nomes = produtos.filter(p => p.preco > 20).map(p => p.nome);
 
 // const nomes = produtos
 // .filter((p) => {
@@ -717,4 +719,4 @@ const conceitos = notas.map((nota) => {
         return "F";
     }   
 });
-console.log(conceitos);
+console.log(conceitos); 
