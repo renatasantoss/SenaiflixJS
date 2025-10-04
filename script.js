@@ -503,4 +503,218 @@
 //Peça um número ao usuário.
 //Use um `while` para inverter seus dígitos (exemplo: `123` → `321`).
 
+//Função Callback
 
+// Array.map((Element, index, array) => {
+// })
+
+// const alunos = ["Ana", "Bruno", "Carla"];
+
+// const listaNumerada = alunos.map((nome, index) => {
+//     return `${index + 1} - ${nome}`
+
+// });
+
+// console.log(listaNumerada);
+
+// const listaNumerada = alunos.map((nomme, index) => `${index + 1 } - ${nome}`);
+
+// console.log(listaNumerada);
+
+// const produtos = ["lapis", "caneta", "caderno"];
+
+// const maiusculos = proodutos.map ((Element)=> {
+//     return element.toUpperCase();
+// })
+// console.log(maiusculos)
+
+// const lucas = {name: "Lucas", lastname: "Lacerda", age: 20};
+// const maria = {name: "Maria", lastname: "Oliveira", age: 17};
+// const joao = {name: "João", lastname: "Silva", age: 18};
+// const ana = {name: "Ana", lastname: "Santos", age: 22};
+
+// const people = [lucas, maria, joao, ana];
+
+//Filter A Peneira
+//Cria um **novo array** com elementos que passam em um teste logico.
+//Callback deve retornar **true** ou **false**
+//Retorna **novo array** (nao altera o origina).
+
+// const maiores = people.filter((value, index, array) => {
+//     console.log("Index:", index);
+//     console.log("Value:", value.name);
+
+//     return value.age >= 18;
+// })
+
+//     console.log("Resultado filter", maiores);
+
+//Map - O transformador
+//Cria um **novo array do mesmo tamanho**, transformando os elementos.
+//Util para extrair campos, modificar valores, gerar novos objetos.
+//Retorna um array novo (imutavel).
+
+// const frases = people.map((value, index, array) => {
+//     console.log("Index", index);
+//     console.log("Pessoa", value.name);
+//     console.log("Idade", value.age);
+
+//     return `${value.name} tem ${value.age} anos!`
+
+// })
+// console.log("Resultado map:", frases);
+
+//Find - O Buscador Unico
+//Find retorna o primeiro elemento que satisfaz a condição.
+//Se nenhum elemento atender retorna Underfined.
+//Não altera o array original.
+
+// const mariaEncontrada = people.find((value, index, array) => {
+//     console.log("Index", index);
+//     console.log("Pessoa", value.name);
+
+//     return value.name === "Maria";
+// })
+
+// console.log("Resultado find", mariaEncontrada);
+
+//Reduce - O Agregador
+//O `reduce` **"reduz" um array inteiro a um unico valor**. Ele percorre cada elemento do array e vai acumulando um resultado com base na função que você passa.
+//`reduce` reduz o array inteiro a **um unico valor**.
+//Esse valor pode ser numero, string, objeto, array etc.
+//Muito poderoso para somas, agrupamentos e estatisticas.
+
+// array.reduce((acumulador, elementoAtual, indice, arrayOriginal) => {
+//     return novoAcumulador
+// } 0);
+
+// const somaIdade = people.reduce((acc, value, index, array) => {
+//     console.log("Index", index);
+//     console.log("Pessoa", value.name, value.age);
+//     console.log("Acumulador antes:", acc);
+
+//     return acc + value.age;
+// }, 0);
+
+// console.log("Resultado reduce", somaIdade)
+
+//Ex 1 - Filter (facil)
+//Dado const arr = [10,15,20,25.30], use filter para obter numeros maiores ou iguais a 20.
+
+// const arr = [10,15,20,25,30];
+// const ge20 = arr.filter((n => n >= 20 ))
+// console.log(ge20);
+
+//Ex 2 - Map (facil)
+//Dado const palavras = ["js", "html"]`, use `map` para capitalizar (`"JS"`, `"HTML"`).
+
+// const palavras = ["js", "html"];
+
+// const maiusculos = palavras.map ((element) => {
+//    return element.toUpperCase();
+// })
+//  console.log(maiusculos)
+
+ // Ex 3 - Find (medio)
+ //Dado um array de objetos usuarios, encontre o usuario com id === 3.
+
+//  const usuarios = [
+//     { id: 1, nome: "A" },
+//     { id: 3, nome: "C" },
+//     { id: 2, nome: "B" },
+//  ];
+    
+//   const u = usuarios.find((u => u.id === 3));
+ 
+//  console.log(u);
+
+//Ex 4 - Map + Filter (medio)
+//Enunciado: Dado produtos com {nom, preco, crie um array com nomes dos produtos com preco > 20.
+
+// const produtos = [
+
+//     {nome: "X", preco: 10},
+//     {nome: "Y", preco: 30},
+
+// ];
+
+// // const nomes = produtos.filter(p => p.preco > 20).map(p => p.nome);
+
+// const nomes = produtos
+// .filter((p) => {
+//     return p.preco > 20;
+// })
+// .map((p) => {
+//     return p.nome;
+// })
+// console.log(nomes)
+
+//Adicione um sufixo às palavras
+//Dado um array de palavras, use map para adicionar o sufixo &quot;!!!&quot; a cada uma.
+// const palavras = ["olá", "mundo"];
+
+// const palavraComSufixo = palavras.map((palavra) => {
+//     return palavra + "!!!";
+// });
+// console.log(palavraComSufixo);
+
+//Adicione o prefixo “Colaborador: “ às palavras
+//Dado um array de nomes, use map para adicionar o prefixo Colaborador antes de cada nome.
+
+// const palavras = ["olá", "bem-vindo"];
+
+// const palavraComSufixo = palavras.map((palavra) => {
+//     return palavra + " Colaborador ";
+// });
+// console.log(palavraComSufixo);
+
+
+//Extraindo nomes de objetos
+// Dado um array de objetos representando pessoas, crie um novo array contendo apenas os nomes.
+
+// const pessoas = [
+//     { nome: "Ana", idade: 25 },
+//     { nome: "Bruno", idade: 30 },
+//     { nome: "Carla", idade: 28 },
+// ];
+// const nomes = pessoas.map((pessoa) => {
+//     return pessoa.nome;
+// });
+// console.log(nomes);
+
+//]Calculando áreas de círculos
+// Você tem um array de raios e precisa calcular as áreas dos círculos correspondentes,Fórmula, Área = π * r²
+
+// const raios = [ 3, 5, 7];
+
+// const areas = raios.map((raio) => {
+//     return Math.PI * raio ** 2;
+// }
+
+//Formatando preços
+//Você tem um array de preços em reais e deseja formatá-los como string no formato R$ xx,xx.
+//  const precos = [10, 20.5, 30.99];
+
+// const precosFormatados = precos.map((preco) => {
+//      return `R$ ${preco.toFixed(2).replace('.', ',')}`;
+// });
+//     console.log(precosFormatados);
+
+//Transformando notas escolares
+//Dado um array de notas de alunos (0 a 100), converta cada nota em um conceito (A, B, C, D, F).    
+
+const notas = [95, 82, 67, 45, 88];
+const conceitos = notas.map((nota) => {
+    if (nota >= 90) {
+        return "A";
+    } else if (nota >= 80) {
+        return "B";
+    } else if (nota >= 70) {
+        return "C";
+    } else if (nota >= 60) {
+        return "D";
+    } else {
+        return "F";
+    }   
+});
+console.log(conceitos);
