@@ -705,18 +705,51 @@
 //Transformando notas escolares
 //Dado um array de notas de alunos (0 a 100), converta cada nota em um conceito (A, B, C, D, F).    
 
-const notas = [95, 82, 67, 45, 88];
-const conceitos = notas.map((nota) => {
-    if (nota >= 90) {
-        return "A";
-    } else if (nota >= 80) {
-        return "B";
-    } else if (nota >= 70) {
-        return "C";
-    } else if (nota >= 60) {
-        return "D";
-    } else {
-        return "F";
-    }   
+// const notas = [95, 82, 67, 45, 88];
+// const conceitos = notas.map((nota) => {
+//     if (nota >= 90) {
+//         return "A";
+//     } else if (nota >= 80) {
+//         return "B";
+//     } else if (nota >= 70) {
+//         return "C";
+//     } else if (nota >= 60) {
+//         return "D";
+//     } else {
+//         return "F";
+//     }   
+// });
+// console.log(conceitos); 
+
+// Gerando slugs para URLs
+//Você tem um array de títulos de artigos e quer convertê-los em slugs para URLs:
+// Tudo em minúsculo
+// Espaços substituídos por -
+
+// const titulos = ["Aprendendo JavaScript", "Introdução ao HTML", "CSS para Iniciantes"];
+
+// const slugs = titulos.map((titulo) => {
+//     return titulo.toLowerCase().replace(/\s+/g, '-');
+// });
+// console.log(slugs);
+
+// Transformando array de objetos
+// Você tem um array de produtos e deseja retornar um novo array contendo apenas:
+// O nome do produto
+// O preço formatado no padrão brasileiro (R$ xx,xx)
+
+const produtos = [
+    { nome: "Computador", preco: 3200 },
+    { nome: "Teclado", preco: 250.5 },
+    { nome: "Mouse", preco: 354.99 },
+];
+
+const produtosFormatados = produtos.map((produto) => {
+    return {
+        nome: produto.nome,
+        preco: `R$ ${produto.preco.toFixed(2).replace('.', ',')}`
+    };
 });
-console.log(conceitos); 
+
+console.log(produtosFormatados);
+
